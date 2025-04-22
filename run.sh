@@ -7,4 +7,5 @@ nohup python -u run.py \
     --max_attached_imgs 3 \
     --temperature 1 \
     --fix_box_color \
+    --search_mode \
     --seed 42 > test_tasks.log &

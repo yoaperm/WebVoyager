@@ -1,0 +1,13 @@
+SYSTEM_PROMPT_BEST = """
+
+
+
+"""
+
+
+SYSTEM_PROMPT_BEST_TEXT_ONLY = """
+
+
+
+
+"""

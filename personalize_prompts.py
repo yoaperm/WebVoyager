@@ -1,0 +1,13 @@
+SYSTEM_PROMPT_PERSONAL = """
+
+
+
+"""
+
+
+SYSTEM_PROMPT_PERSONAL_TEXT_ONLY = """
+
+
+
+
+"""
