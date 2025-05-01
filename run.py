@@ -376,7 +376,7 @@ def main():
                 driver_task.save_screenshot(img_path)
                 
                 # reflection
-                is_reflexion = False
+                is_reflection = False
                 
                 files = sorted(glob.glob(f'{task_dir}/*.png'), key=numerical_sort)
                 
@@ -393,7 +393,7 @@ def main():
                             
                             logging.info(f"Back to step {np.argmax(results) - 1}")
                             
-                            is_reflexion = True
+                            is_reflection = True
                             driver_task.get(urls[np.argmax(results) - 1])
                                 
                             try:
@@ -457,7 +457,7 @@ def main():
 
             # Clip messages, too many attached images may cause confusion
             if not args.text_only:
-                messages = clip_message_and_obs(messages, args.max_attached_imgs, is_reflexion)
+                messages = clip_message_and_obs(messages, args.max_attached_imgs, is_reflection)
             else:
                 messages = clip_message_and_obs_text_only(messages, args.max_attached_imgs)
 
