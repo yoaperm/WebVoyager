@@ -76,3 +76,17 @@ Action: {One Action format you choose}
 
 Then the User will provide:
 Observation: {Accessibility Tree of a web page}"""
+
+REFLECTION_PROMPT="""
+    You have just completed a web search step in a broader task. Before proceeding, reflect on the effectiveness of your current strategy.
+
+    1. Evaluation: Was the information retrieved useful and relevant to the overall goal of the task? Did it move the process forward meaningfully?
+
+    2. Strategy Analysis: What approach or reasoning led to the last search? Was it optimal? Were there any limitations or inefficiencies in how you framed the query or interpreted the results?
+
+    3. Strategy Adjustment: Based on this analysis, should you continue with the current approach, or is there a better strategy to try next? (e.g., reformulating the query, narrowing or broadening scope, using different keywords, considering other sources).
+
+    4. Recommendation: What is your recommended next action? Be specific—this could be a refined query, a new search angle, or a shift in approach.
+
+    Write your reflection in a clear and structured manner, following the four steps above.
+"""

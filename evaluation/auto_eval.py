@@ -145,7 +145,7 @@ def main():
     client = OpenAI(api_key=args.api_key)
     # webs = ['Allrecipes', 'Amazon', 'Apple', 'ArXiv', 'BBC News', 'Booking', 'Cambridge Dictionary',
     #         'Coursera', 'ESPN', 'GitHub', 'Google Flights', 'Google Map', 'Google Search', 'Huggingface', 'Wolfram Alpha']
-    webs = ['Cambridge Dictionary']
+    webs = ['Amazon']
 
     for web in webs:
         web_task_res = []
