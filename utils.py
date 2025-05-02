@@ -8,6 +8,9 @@ import numpy as np
 from PIL import Image
 from utils_webarena import fetch_browser_info, fetch_page_accessibility_tree,\
                     parse_accessibility_tree, clean_accesibility_tree
+                    
+import cv2
+import matplotlib.pyplot as plt
 
 
 def resize_image(image_path):
@@ -255,27 +258,64 @@ def clip_message(msg, max_img_num):
     return clipped_msg
 
 
-def clip_message_and_obs(msg, max_img_num):
+def clip_message_and_obs(msg, max_img_num, is_reflexion):
     clipped_msg = []
     img_num = 0
     for idx in range(len(msg)):
         curr_msg = msg[len(msg) - 1 - idx]
-        if curr_msg['role'] != 'user':
-            clipped_msg = [curr_msg] + clipped_msg
-        else:
-            if type(curr_msg['content']) == str:
-                clipped_msg = [curr_msg] + clipped_msg
-            elif img_num < max_img_num:
-                img_num += 1
+        try : 
+            if curr_msg['role'] != 'user':
                 clipped_msg = [curr_msg] + clipped_msg
             else:
-                msg_no_pdf = curr_msg['content'][0]["text"].split("Observation:")[0].strip() + "Observation: A screenshot and some texts. (Omitted in context.)"
-                msg_pdf = curr_msg['content'][0]["text"].split("Observation:")[0].strip() + "Observation: A screenshot, a PDF file and some texts. (Omitted in context.)"
-                curr_msg_clip = {
-                    'role': curr_msg['role'],
-                    'content': msg_no_pdf if "You downloaded a PDF file" not in curr_msg['content'][0]["text"] else msg_pdf
-                }
-                clipped_msg = [curr_msg_clip] + clipped_msg
+                if type(curr_msg['content']) == str:
+                    clipped_msg = [curr_msg] + clipped_msg
+                elif img_num < max_img_num:
+                    img_num += 1
+                    clipped_msg = [curr_msg] + clipped_msg
+                else:
+                    if is_reflexion: 
+                        msg_no_pdf = curr_msg['content'][0]["text"].split("Observation:")[0].strip() + "Observation: A screenshot and some texts. (Omitted in context.) Please change the approach which completely different from previous approach to solve this tasks since the same approach is not worked or tend to get endless loop."
+                        msg_pdf = curr_msg['content'][0]["text"].split("Observation:")[0].strip() + "Observation: A screenshot, a PDF file and some texts. (Omitted in context.) Please change the approach which completely different from previous approach to solve this tasks since the same approach is not worked or tend to get endless loop."
+                        curr_msg_clip = {
+                            'role': curr_msg['role'],
+                            'content': msg_no_pdf if "You downloaded a PDF file" not in curr_msg['content'][0]["text"] else msg_pdf
+                        }
+                        clipped_msg = [curr_msg_clip] + clipped_msg
+                    else: 
+                        msg_no_pdf = curr_msg['content'][0]["text"].split("Observation:")[0].strip() + "Observation: A screenshot and some texts. (Omitted in context.)"
+                        msg_pdf = curr_msg['content'][0]["text"].split("Observation:")[0].strip() + "Observation: A screenshot, a PDF file and some texts. (Omitted in context.)"
+                        curr_msg_clip = {
+                            'role': curr_msg['role'],
+                            'content': msg_no_pdf if "You downloaded a PDF file" not in curr_msg['content'][0]["text"] else msg_pdf
+                        }
+                        clipped_msg = [curr_msg_clip] + clipped_msg
+        except:
+            curr_msg = curr_msg[0]
+            if curr_msg['role'] != 'user':
+                clipped_msg = [curr_msg] + clipped_msg
+            else:
+                if type(curr_msg['content']) == str:
+                    clipped_msg = [curr_msg] + clipped_msg
+                elif img_num < max_img_num:
+                    img_num += 1
+                    clipped_msg = [curr_msg] + clipped_msg
+                else:
+                    if is_reflexion: 
+                        msg_no_pdf = curr_msg['content'][0]["text"].split("Observation:")[0].strip() + "Observation: A screenshot and some texts. (Omitted in context.) Please change the approach which completely different from previous approach to solve this tasks since the same approach is not worked or tend to get endless loop."
+                        msg_pdf = curr_msg['content'][0]["text"].split("Observation:")[0].strip() + "Observation: A screenshot, a PDF file and some texts. (Omitted in context.) Please change the approach which completely different from previous approach to solve this tasks since the same approach is not worked or tend to get endless loop."
+                        curr_msg_clip = {
+                            'role': curr_msg['role'],
+                            'content': msg_no_pdf if "You downloaded a PDF file" not in curr_msg['content'][0]["text"] else msg_pdf
+                        }
+                        clipped_msg = [curr_msg_clip] + clipped_msg
+                    else: 
+                        msg_no_pdf = curr_msg['content'][0]["text"].split("Observation:")[0].strip() + "Observation: A screenshot and some texts. (Omitted in context.)"
+                        msg_pdf = curr_msg['content'][0]["text"].split("Observation:")[0].strip() + "Observation: A screenshot, a PDF file and some texts. (Omitted in context.)"
+                        curr_msg_clip = {
+                            'role': curr_msg['role'],
+                            'content': msg_no_pdf if "You downloaded a PDF file" not in curr_msg['content'][0]["text"] else msg_pdf
+                        }
+                        clipped_msg = [curr_msg_clip] + clipped_msg
     return clipped_msg
 
 
@@ -403,3 +443,45 @@ def get_pdf_retrieval_ans_from_assistant(client, pdf_path, task):
     # print(assistant_deletion_status)
     logging.info(assistant_deletion_status)
     return messages_text
+
+def sift_similarity(image_path1, image_path2, visualization=False):
+    img1 = cv2.imread(image_path1, cv2.IMREAD_GRAYSCALE)
+    img2 = cv2.imread(image_path2, cv2.IMREAD_GRAYSCALE)
+
+    img1 = cv2.resize(img1, (0, 0), fx=0.8, fy=0.8)
+    img2 = cv2.resize(img2, (0, 0), fx=0.8, fy=0.8)
+
+    sift = cv2.SIFT_create()
+
+    kp1, des1 = sift.detectAndCompute(img1, None)
+    kp2, des2 = sift.detectAndCompute(img2, None)
+
+    index_params = dict(algorithm=1, trees=5)
+    search_params = dict(checks=50)
+    flann = cv2.FlannBasedMatcher(index_params, search_params)
+    matches = flann.knnMatch(des1, des2, k=2)
+
+    good_matches = []
+    for m, n in matches:
+        if m.distance < 0.65 * n.distance:
+            good_matches.append(m)
+
+    similarity = len(good_matches) / min(len(kp1), len(kp2))
+    
+    if visualization: 
+      print(f"Similarity Score: {similarity:.2f}")
+      result_img = cv2.drawMatches(img1, kp1, img2, kp2, good_matches, None,
+                                  flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
+
+      plt.figure(figsize=(12, 6))
+      plt.imshow(result_img)
+      plt.title(f'SIFT Matches — Similarity: {similarity:.2f}')
+      plt.axis('off')
+      plt.show()
+
+    return similarity
+
+def numerical_sort(value):
+    filename = os.path.basename(value)
+    numbers = re.findall(r'\d+', filename)
+    return int(numbers[0]) if numbers else -1

@@ -22,7 +22,35 @@ SYSTEM_PROMPT = """As an evaluator, you will be presented with three primary com
 -- NOTE that the screenshot is authentic, but the response provided by LLM is generated at the end of web browsing, and there may be discrepancies between the text and the screenshots.
 -- Note the difference: 1) Result response may contradict the screenshot, then the content of the screenshot prevails, 2) The content in the Result response is not mentioned on the screenshot, choose to believe the content.
 
-You should elaborate on how you arrived at your final evaluation and then provide a definitive verdict on whether the task has been successfully accomplished, either as 'SUCCESS' or 'NOT SUCCESS'."""
+Evaluate the following aspects using "Yes" or "No", and provide a brief reasoning for each:
+
+1.  **Correctness:** Did the agent achieve the main goal of the task based on its final response and the screenshots?
+    *   If the agent's final answer and the state shown in the final screenshot clearly fulfill the task's main objective, answer "Yes".
+    *   If the agent failed to achieve the main goal or the final state is incorrect/incomplete according to the task, answer "No".
+2.  **Completeness:** If the task involved multiple sub-goals or constraints, did the agent address all of them?
+    *   If the task had multiple parts and the agent successfully addressed *all* of them, answer "Yes" (equivalent to Completeness=All).
+    *   If the agent missed some parts of the task or failed to satisfy all constraints, answer "No" (equivalent to Completeness=Partial or None).
+3.  **Relevance (for Best Deal/Personalization tasks):** Does the agent's final answer/recommendation align with the "best deal" or personalization criteria specified in the task?
+    *   For "best deal" tasks, if the agent's answer appears to be the cheapest/highest discount option *among those visible in the screenshots*, answer "Yes".
+    *   For personalization tasks, if the agent's recommendation seems appropriate for the given user profile, answer "Yes".
+    *   If the answer/recommendation is not relevant or the best deal/personalization criteria are not met, answer "No".
+4.  **Action Efficiency:** Did the agent perform any unnecessary or redundant actions during its interaction (e.g., clicking the same button repeatedly, excessive scrolling without finding relevant information)?
+    *   If the agent's trajectory shows unnecessary or inefficient actions, answer "Yes".
+    *   If the agent's actions seem reasonable and efficient, answer "No".
+    *   This requires looking at the sequence of actions and screenshots, not just the final state.
+
+Provide your overall verdict (SUCCESS or NOT SUCCESS) based primarily on Correctness and Completeness.
+
+Format your response as follows:
+
+Correctness: [Yes/No] Reasoning: [...]
+Completeness: [Yes/No] Reasoning: [...]
+Relevance: [Yes/No/NA] Reasoning: [...]
+Action Efficiency: [Yes/No] Reasoning: [...]
+
+Overall Verdict: [SUCCESS/NOT SUCCESS]
+"""
+
 USER_PROMPT = """TASK: <task>
 Result Response: <answer>
 <num> screenshots at the end: """
@@ -92,6 +120,7 @@ def auto_eval_by_gpt4v(process_dir, openai_client, api_model, img_num):
             + [{'type': 'text', 'text': "Your verdict:\n"}]
         }
     ]
+    print('messages:', messages)
     while True:
         try:
             print('Calling gpt4v API to get the auto evaluation......')
@@ -138,14 +167,14 @@ def main():
     parser.add_argument('--process_dir', type=str, default='results')
     parser.add_argument('--lesson_dir', type=str, default='results')
     parser.add_argument("--api_key", default="key", type=str, help="YOUR_OPENAI_API_KEY")
-    parser.add_argument("--api_model", default="gpt-4-turbo", type=str, help="api model name")
+    parser.add_argument("--api_model", default="gpt-4o", type=str, help="api model name")
     parser.add_argument("--max_attached_imgs", type=int, default=1)
     args = parser.parse_args()
 
     client = OpenAI(api_key=args.api_key)
     # webs = ['Allrecipes', 'Amazon', 'Apple', 'ArXiv', 'BBC News', 'Booking', 'Cambridge Dictionary',
     #         'Coursera', 'ESPN', 'GitHub', 'Google Flights', 'Google Map', 'Google Search', 'Huggingface', 'Wolfram Alpha']
-    webs = ['Amazon']
+    webs = ['NocNoc']
 
     for web in webs:
         web_task_res = []

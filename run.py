@@ -12,12 +12,23 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 
+<<<<<<< HEAD
 from prompts import SYSTEM_PROMPT, SYSTEM_PROMPT_TEXT_ONLY
 from best_deal_prompts import SYSTEM_PROMPT_BEST, SYSTEM_PROMPT_BEST_TEXT_ONLY
 from personalize_prompts import SYSTEM_PROMPT_PERSONAL, SYSTEM_PROMPT_PERSONAL_TEXT_ONLY
+=======
+from prompts import SYSTEM_PROMPT, SYSTEM_PROMPT_TEXT_ONLY, REFLECTION_PROMPT
+>>>>>>> 127b86d73dc9e21958c9811b42a44f42529a4b45
 from openai import OpenAI
 from utils import get_web_element_rect, encode_image, extract_information, print_message,\
-    get_webarena_accessibility_tree, get_pdf_retrieval_ans_from_assistant, clip_message_and_obs, clip_message_and_obs_text_only
+    get_webarena_accessibility_tree, get_pdf_retrieval_ans_from_assistant, clip_message_and_obs, clip_message_and_obs_text_only, \
+    numerical_sort, sift_similarity
+
+import glob
+from concurrent.futures import ProcessPoolExecutor
+import itertools
+import numpy as np
+import random
 
 
 def setup_logger(folder_path):
@@ -123,12 +134,12 @@ def call_gpt4v_api(args, openai_client, messages):
             if not args.text_only:
                 logging.info('Calling gpt4v API...')
                 openai_response = openai_client.chat.completions.create(
-                    model=args.api_model, messages=messages, max_tokens=1000, seed=args.seed
+                    model=args.api_model, messages=messages, max_tokens=1000, seed=args.seed, temperature=args.temperature, timeout=30
                 )
             else:
                 logging.info('Calling gpt4 API...')
                 openai_response = openai_client.chat.completions.create(
-                    model=args.api_model, messages=messages, max_tokens=1000, seed=args.seed, timeout=30
+                    model=args.api_model, messages=messages, max_tokens=1000, seed=args.seed, temperature=args.temperature, timeout=30
                 )
 
             prompt_tokens = openai_response.usage.prompt_tokens
@@ -235,10 +246,10 @@ def exec_action_scroll(info, web_eles, driver_task, args, obs_info):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--test_file', type=str, default='data/test.json')
-    parser.add_argument('--max_iter', type=int, default=5)
+    parser.add_argument('--test_file', type=str, default='data/tasks_test.jsonl')
+    parser.add_argument('--max_iter', type=int, default=15)
     parser.add_argument("--api_key", default="key", type=str, help="YOUR_OPENAI_API_KEY")
-    parser.add_argument("--api_model", default="gpt-4-turbo", type=str, help="api model name")
+    parser.add_argument("--api_model", default="gpt-4o-mini", type=str, help="api model name")
     parser.add_argument("--output_dir", type=str, default='results')
     parser.add_argument("--seed", type=int, default=None)
     parser.add_argument("--max_attached_imgs", type=int, default=1)
@@ -285,7 +296,8 @@ def main():
 
         # About window size, 765 tokens
         # You can resize to height = 512 by yourself (255 tokens, Maybe bad performance)
-        driver_task.set_window_size(args.window_width, args.window_height)  # larger height may contain more web information
+        # driver_task.set_window_size(args.window_width, args.window_height)  # larger height may contain more web information
+        driver_task.maximize_window()
         driver_task.get(task['web'])
         try:
             driver_task.find_element(By.TAG_NAME, 'body').click()
@@ -335,9 +347,14 @@ def main():
         it = 0
         accumulate_prompt_token = 0
         accumulate_completion_token = 0
-
+        urls = []
+        
         while it < args.max_iter:
             logging.info(f'Iter: {it}')
+            logging.info(f'Route in: {driver_task.current_url}')
+            current_url = driver_task.current_url
+            urls.append(current_url)
+            
             it += 1
             if not fail_obs:
                 try:
@@ -357,6 +374,65 @@ def main():
 
                 img_path = os.path.join(task_dir, 'screenshot{}.png'.format(it))
                 driver_task.save_screenshot(img_path)
+                
+                # reflection
+                is_reflection = False
+                
+                files = sorted(glob.glob(f'{task_dir}/*.png'), key=numerical_sort)
+                
+                if (len(files) > 1) and (random.random() < 0.3):
+                    logging.info('Reflection...')
+                    reference_image = files[-1]
+                    with ProcessPoolExecutor() as executor:
+                        results = list(executor.map(sift_similarity, files[:-1], itertools.repeat(reference_image)))  
+
+                    for name, similarity in zip(files[:-1], results):  
+                        logging.info(f"{name} -> similarity: {similarity}")
+                        if similarity > 0.55:
+                            logging.info(f"Step {len(results)}: Similarity above threshold (0.55) for {name}.  Consider changing strategy.")
+                            
+                            logging.info(f"Back to step {np.argmax(results) - 1}")
+                            
+                            is_reflection = True
+                            driver_task.get(urls[np.argmax(results) - 1])
+                                
+                            try:
+                                if not args.text_only:
+                                    rects, web_eles, web_eles_text = get_web_element_rect(driver_task, fix_color=args.fix_box_color)
+                                else:
+                                    accessibility_tree_path = os.path.join(task_dir, 'accessibility_tree{}'.format(it))
+                                    ac_tree, obs_info = get_webarena_accessibility_tree(driver_task, accessibility_tree_path)
+
+                            except Exception as e:
+                                if not args.text_only:
+                                    logging.error('Driver error when adding set-of-mark.')
+                                else:
+                                    logging.error('Driver error when obtaining accessibility tree.')
+                                logging.error(e)
+                                break
+
+                            img_path = os.path.join(task_dir, 'screenshot{}.png'.format(it))
+                            driver_task.save_screenshot(img_path)
+                            
+                            reflection_messages = [{'role': 'user', 'content': REFLECTION_PROMPT}]
+                            messages.append(reflection_messages)
+                            
+                            # Call GPT-4v API
+                            prompt_tokens, completion_tokens, gpt_call_error, openai_response = call_gpt4v_api(args, client, messages)
+
+                            if gpt_call_error:
+                                break
+                            else:
+                                accumulate_prompt_token += prompt_tokens
+                                accumulate_completion_token += completion_tokens
+                                logging.info(f'Accumulate Prompt Tokens: {accumulate_prompt_token}; Accumulate Completion Tokens: {accumulate_completion_token}')
+                                logging.info('API call complete...')
+                            gpt_4v_res = openai_response.choices[0].message.content
+                            messages.append({'role': 'assistant', 'content': gpt_4v_res})
+                            
+                            break
+                                
+                    logging.info("Done reflection")
 
                 # accessibility tree
                 if (not args.text_only) and args.save_accessibility_tree:
@@ -381,7 +457,7 @@ def main():
 
             # Clip messages, too many attached images may cause confusion
             if not args.text_only:
-                messages = clip_message_and_obs(messages, args.max_attached_imgs)
+                messages = clip_message_and_obs(messages, args.max_attached_imgs, is_reflection)
             else:
                 messages = clip_message_and_obs_text_only(messages, args.max_attached_imgs)
 
