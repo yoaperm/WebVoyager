@@ -1,0 +1,21 @@
+{"web_name": "NocNoc", "id": "NocNoc--0", "lang": "en", "ques_group": "cheap", "ques": "Find the top 3 cheapest cooking pans by sorting the results from price low to high, Answer the first 3 results after sorting.", "web": "https://nocnoc.com"}
+{"web_name": "NocNoc", "id": "NocNoc--1", "lang": "en", "ques_group": "cheap", "ques": "What's the most affordable air purifier? sort the results from price low to high.", "web": "https://nocnoc.com"}
+{"web_name": "NocNoc", "id": "NocNoc--2", "lang": "en", "ques_group": "cheap", "ques": "Find the most budget-friendly projectors and sort the results by price, low to high.", "web": "https://nocnoc.com"}
+{"web_name": "NocNoc", "id": "NocNoc--3", "lang": "en", "ques_group": "new", "ques": "Show me the latest robot vacuums and sort the results by new arrivals.", "web": "https://nocnoc.com"}
+{"web_name": "NocNoc", "id": "NocNoc--4", "lang": "en", "ques_group": "new", "ques": "Find the newest hair dryers and sort the results by new arrivals.", "web": "https://nocnoc.com"}
+{"web_name": "NocNoc", "id": "NocNoc--5", "lang": "en", "ques_group": "new", "ques": "Find me the newest Sony headphones and sort the results by new arrivals.", "web": "https://nocnoc.com"}
+{"web_name": "NocNoc", "id": "NocNoc--6", "lang": "en", "ques_group": "safe", "ques": "Search for the Dyson vacuum from the store with the highest number of sales by sorting from best selling (high to low).", "web": "https://nocnoc.com"}
+{"web_name": "NocNoc", "id": "NocNoc--7", "lang": "en", "ques_group": "safe", "ques": "Find the highest-rated store that sells Garmin Forerunner Pink (smartwatches), Answer the store name and the product name after searching", "web": "https://nocnoc.com"}
+{"web_name": "NocNoc", "id": "NocNoc--8", "lang": "en", "ques_group": "safe", "ques": "Find Samsung Smart TV from the store with the highest number of sales by sorting from best selling (high to low).", "web": "https://nocnoc.com"}
+{"web_name": "NocNoc", "id": "NocNoc--9", "lang": "en", "ques_group": "newcheap", "ques": "Find the newest and cheapest Samsung smartwatches.", "web": "https://nocnoc.com"}
+{"web_name": "NocNoc", "id": "NocNoc--10", "lang": "en", "ques_group": "newcheap", "ques": "Find the newest and cheapest Logitech mouses.", "web": "https://nocnoc.com"}
+{"web_name": "NocNoc", "id": "NocNoc--11", "lang": "en", "ques_group": "cheapsafe", "ques": "Find the cheapest soundbar with over 50 units sold.", "web": "https://nocnoc.com"}
+{"web_name": "NocNoc", "id": "NocNoc--12", "lang": "en", "ques_group": "cheapsafe", "ques": "Find the cheapest projectors with over 20 units sold.", "web": "https://nocnoc.com"}
+{"web_name": "NocNoc", "id": "NocNoc--13", "lang": "en", "ques_group": "newsafe", "ques": "Find the latest Smart TV with over 20 units sold.", "web": "https://nocnoc.com"}
+{"web_name": "NocNoc", "id": "NocNoc--14", "lang": "en", "ques_group": "newsafe", "ques": "Find the Newest air conditioners with over 10 units sold.", "web": "https://nocnoc.com"}
+{"web_name": "NocNoc", "id": "NocNoc--15", "lang": "th", "ques_group": "cheap", "ques": "ค้นหากระทะทำอาหารที่ราคาถูกที่สุด 3 อันดับแรก โดยจัดเรียงผลลัพธ์ตามราคาจากต่ำไปสูง จากนั้นตอบผลลัพธ์ 3 อันดับแรกหลังจากการจัดเรียง", "web": "https://nocnoc.com"}
+{"web_name": "NocNoc", "id": "NocNoc--16", "lang": "th", "ques_group": "new", "ques": "ค้นหาไดร์เป่าผมรุ่นใหม่ล่าสุด โดยจัดเรียงผลลัพธ์ตามสินค้ามาใหม่", "web": "https://nocnoc.com"}
+{"web_name": "NocNoc", "id": "NocNoc--17", "lang": "th", "ques_group": "safe", "ques": "ค้นหาเครื่องดูดฝุ่น Dyson จากร้านค้าที่มียอดขายสูงที่สุด โดยจัดเรียงจากยอดขายมากไปน้อย", "web": "https://nocnoc.com"}
+{"web_name": "NocNoc", "id": "NocNoc--18", "lang": "th", "ques_group": "newcheap", "ques": "ค้นหานาฬิกาอัจฉริยะ Samsung ที่ใหม่ที่สุดและราคาถูกที่สุด", "web": "https://nocnoc.com"}
+{"web_name": "NocNoc", "id": "NocNoc--19", "lang": "th", "ques_group": "cheapsafe", "ques": "ค้นหาซาวด์บาร์ที่ราคาถูกที่สุด และมียอดขายไปแล้วมากกว่า 50 เครื่อง", "web": "https://nocnoc.com"}
+{"web_name": "NocNoc", "id": "NocNoc--20", "lang": "th", "ques_group": "newsafe", "ques": "ค้นหา Smart TV รุ่นล่าสุด ที่มียอดขายไปแล้วมากกว่า 20 เครื่อง", "web": "https://nocnoc.com"}
