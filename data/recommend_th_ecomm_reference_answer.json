@@ -1,0 +1,112 @@
+{
+  "NocNoc": {
+    "notice": " Products results are related to time and location.",
+    "answers": [
+      {
+        "id": 0,
+        "type": "possible",
+        "ans": "First 3 results after sort by price low to high"
+      },
+      {
+        "id": 1,
+        "type": "possible",
+        "ans": "Mi Thailand Mall DEERMA F628 เครื่องฟอกอากาศ 5 ลิตร ขาว"
+      },
+      {
+        "id": 2,
+        "type": "possible",
+        "ans": "Wanbo มินิโปรเจคเตอร์พกพา รุ่น Mini Projector (White)"
+      },
+      {
+        "id": 3,
+        "type": "possible",
+        "ans": "TEFAL เครื่องดูดฝุ่นมือจับ 200W ดูด+ถูพื้น รุ่น GF5035F0"
+      },
+      {
+        "id": 4,
+        "type": "possible",
+        "ans": "[NEW 2025] MOVA Turbo High-Speed Hair Dryer"
+      },
+      {
+        "id": 5,
+        "type": "possible",
+        "ans": "Sony WH-CH520 หูฟังครอบหูไร้สาย Bluetooth Headphone"
+      },
+      {
+        "id": 6,
+        "type": "possible",
+        "ans": "Dyson เครื่องดูดฝุ่นไร้สาย รุ่น V8 Slim Fluffy เงิน / แดง รุ่น V8 Slim Fluffy; 108 sold"
+      },
+      {
+        "id": 7,
+        "type": "possible",
+        "ans": "Store name: Garmin by itcornerkhonkaenGarmin, Product name: Forerunner 255S Standard / Music Light Pink"
+      },
+      {
+        "id": 8,
+        "type": "possible",
+        "ans": "Samsung SMART Flat TV 32T4202; 498 sold"
+      },
+      {
+        "id": 9,
+        "type": "possible",
+        "ans": "Samsung Galaxy Fit 3 Smartwatch Pink Gold; ฿1,399"
+      },
+      {
+        "id": 10,
+        "type": "possible",
+        "ans": "Logitech G304 Lightspeed Wireless Gaming Mouse สีขาว"
+      },
+      {
+        "id": 11,
+        "type": "possible",
+        "ans": "Bose Bass Module รุ่น Bass 500 สีดำว; 70 sold"
+      },
+      {
+        "id": 12,
+        "type": "possible",
+        "ans": "Wanbo T6 Max Projector 4K Full HD; 25 sold"
+      },
+      {
+        "id": 13,
+        "type": "possible",
+        "ans": "SONY Bravia 4K Google TV รุ่น KD-X75K 65 นิ้ว; 26 sold"
+      },
+      {
+        "id": 14,
+        "type": "possible",
+        "ans": "Daikin แอร์แบบติดผนัง Inverter ประหยัดไฟ เบอร์ 5 MAX INVERTER รุ่น FTKQ SERIES"
+      },
+      {
+        "id": 15,
+        "type": "possible",
+        "ans": "ตอบผลลัพธ์ 3 อันดับแรกหลังจากการจัดเรียง"
+      },
+      {
+        "id": 16,
+        "type": "golden",
+        "ans": "[NEW 2025] MOVA Turbo High-Speed Hair Dryer ไดร์เป่าผม"
+      },
+      {
+        "id": 17,
+        "type": "possible",
+        "ans": "Dyson เครื่องดูดฝุ่นไร้สาย รุ่น V8 Slim Fluffy เงิน / แดง รุ่น V8 Slim Fluffy"
+      },
+      {
+        "id": 18,
+        "type": "possible",
+        "ans": "Samsung Galaxy Fit 3 Smartwatch นาฬิกาอัจฉริยะ Pink Gold; 1,399บาท"
+      },
+      {
+        "id": 19,
+        "type": "possible",
+        "ans": "Bose Bass Module รุ่น Bass 500 สีดำ; ขายแล้ว 70"
+      },
+      {
+        "id": 20,
+        "type": "possible",
+        "ans": "SONY Bravia 4K Google TV รุ่น KD-X75K 65 นิ้ว; ขายแล้ว 26"
+      }
+    ]
+  }
+}
