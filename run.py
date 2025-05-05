@@ -24,6 +24,7 @@ import itertools
 import numpy as np
 import random
 
+from utils import generate_question_by_mode
 
 def setup_logger(folder_path):
     log_file_path = os.path.join(folder_path, 'agent.log')
@@ -243,7 +244,7 @@ def main():
     parser.add_argument('--test_file', type=str, default='data/tasks_test.jsonl')
     parser.add_argument('--max_iter', type=int, default=15)
     parser.add_argument("--api_key", default="key", type=str, help="YOUR_OPENAI_API_KEY")
-    parser.add_argument("--api_model", default="gpt-4o-mini", type=str, help="api model name")
+    parser.add_argument("--api_model", default="gpt-4o", type=str, help="api model name")
     parser.add_argument("--output_dir", type=str, default='results')
     parser.add_argument("--seed", type=int, default=None)
     parser.add_argument("--max_attached_imgs", type=int, default=1)
@@ -279,6 +280,9 @@ def main():
 
     for task_id in range(len(tasks)):
         task = tasks[task_id]
+        # Generate question based on mode before processing
+        if not task.get('ques'):  # If question is empty
+            task['ques'] = generate_question_by_mode(task)
         task_dir = os.path.join(result_dir, 'task{}'.format(task["id"]))
         os.makedirs(task_dir, exist_ok=True)
         setup_logger(task_dir)
