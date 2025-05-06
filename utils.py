@@ -12,6 +12,64 @@ from utils_webarena import fetch_browser_info, fetch_page_accessibility_tree,\
 import cv2
 import matplotlib.pyplot as plt
 
+def generate_question_by_mode(task):
+    """Generate question based on mode and task information"""
+    mode = task.get('mode', 'best-deal')  # default to best-deal if not specified
+    base_query = task.get('query', '')
+   
+    if mode == "best-deal":
+        # Combine query with best deal keywords
+        keywords = [
+            "ราคาถูกที่สุด",
+            "โปรโมชั่น",
+            "ลดราคา",
+            "sale",
+            "cheapest"
+        ]
+        question = f"ค้นหา {base_query} ที่ {' และ '.join(keywords)}"
+       
+    elif mode == "personalized":
+        # Extract user information
+        user_info = task.get('user_info', {})
+        preferences = task.get('user_preference', [])
+       
+        # Validate required fields
+        if not user_info.get('gender') or not user_info.get('age'):
+            raise ValueError("Gender and age are required for personalized mode")
+           
+        # Build demographic info
+        demographic_parts = []
+       
+        # Required fields - must be first
+        demographic_parts.append(f"เพศ{user_info['gender']}")
+        demographic_parts.append(f"อายุ {user_info['age']} ปี")
+       
+        # Optional fields with proper formatting
+        optional_info = []
+        if user_info.get('height_cm'):
+            optional_info.append(f"ส่วนสูง {user_info['height_cm']} ซม.")
+        if user_info.get('weight_kg'):
+            optional_info.append(f"น้ำหนัก {user_info['weight_kg']} กก.")
+        if user_info.get('occupation') and user_info['occupation'] != 'null':
+            optional_info.append(f"อาชีพ {user_info['occupation']}")
+           
+        # Add optional info if exists
+        if optional_info:
+            demographic_parts.extend(optional_info)
+           
+        # Add preferences if exists
+        style_info = ""
+        if preferences:
+            style_info = f" และมีสไตล์การใช้ชีวิตแบบ {', '.join(preferences)}"
+           
+        # Combine everything
+        demographics = ' '.join(demographic_parts)
+        question = f"ค้นหา {base_query} ที่เหมาะสำหรับคน{demographics}{style_info}"
+   
+    else:
+        question = base_query
+       
+    return question
 
 def resize_image(image_path):
     image = Image.open(image_path)
