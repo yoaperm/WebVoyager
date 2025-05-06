@@ -12,7 +12,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 
-from prompts import SYSTEM_PROMPT, SYSTEM_PROMPT_TEXT_ONLY
+from prompts import SYSTEM_PROMPT, SYSTEM_PROMPT_TEXT_ONLY,REFLECTION_PROMPT
 from best_deal_prompts import SYSTEM_PROMPT_BEST, SYSTEM_PROMPT_BEST_TEXT_ONLY
 from personalize_prompts import SYSTEM_PROMPT_PERSONAL, SYSTEM_PROMPT_PERSONAL_TEXT_ONLY
 
