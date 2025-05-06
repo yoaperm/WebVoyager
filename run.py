@@ -12,13 +12,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 
-<<<<<<<<< Temporary merge branch 1
 from prompts import SYSTEM_PROMPT, SYSTEM_PROMPT_TEXT_ONLY
 from best_deal_prompts import SYSTEM_PROMPT_BEST, SYSTEM_PROMPT_BEST_TEXT_ONLY
 from personalize_prompts import SYSTEM_PROMPT_PERSONAL, SYSTEM_PROMPT_PERSONAL_TEXT_ONLY
-=========
-from prompts import SYSTEM_PROMPT, SYSTEM_PROMPT_TEXT_ONLY, REFLECTION_PROMPT
->>>>>>> 127b86d73dc9e21958c9811b42a44f42529a4b45
+
 from openai import OpenAI
 from utils import get_web_element_rect, encode_image, extract_information, print_message,\
     get_webarena_accessibility_tree, get_pdf_retrieval_ans_from_assistant, clip_message_and_obs, clip_message_and_obs_text_only, \
