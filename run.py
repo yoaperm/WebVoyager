@@ -13,8 +13,6 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 
 from prompts import SYSTEM_PROMPT, SYSTEM_PROMPT_TEXT_ONLY,REFLECTION_PROMPT
-from best_deal_prompts import SYSTEM_PROMPT_BEST, SYSTEM_PROMPT_BEST_TEXT_ONLY
-from personalize_prompts import SYSTEM_PROMPT_PERSONAL, SYSTEM_PROMPT_PERSONAL_TEXT_ONLY
 
 from openai import OpenAI
 from utils import get_web_element_rect, encode_image, extract_information, print_message,\
@@ -252,7 +250,7 @@ def main():
     parser.add_argument("--seed", type=int, default=None)
     parser.add_argument("--max_attached_imgs", type=int, default=1)
     parser.add_argument("--temperature", type=float, default=1.0)
-    parser.add_argument("--download_dir", type=str, default="downloads")
+    parser.add_argument("--download_dir", type=str, default="../../../Downloads")
     parser.add_argument("--text_only", action='store_true')
     # for web browser
     parser.add_argument("--headless", action='store_true', help='The window of selenium')
@@ -321,25 +319,25 @@ def main():
         warn_obs = ""  # Type warning
         pattern = r'Thought:|Action:|Observation:'
 
-        if args.search_mode == 'best_deal':
+        # if args.search_mode == 'best_deal':
 
-            messages = [{'role': 'system', 'content': SYSTEM_PROMPT_BEST}]
-            obs_prompt = "Observation: please analyze the attached screenshot and give the Thought and Action. "
-            if args.text_only:
-                messages = [{'role': 'system', 'content': SYSTEM_PROMPT_BEST_TEXT_ONLY}]
-                obs_prompt = "Observation: please analyze the accessibility tree and give the Thought and Action."
-        elif args.search_mode == 'personal':
-            messages = [{'role': 'system', 'content': SYSTEM_PROMPT_PERSONAL}]
-            obs_prompt = "Observation: please analyze the attached screenshot and give the Thought and Action. "
-            if args.text_only:
-                messages = [{'role': 'system', 'content': SYSTEM_PROMPT_PERSONAL_TEXT_ONLY}]
-                obs_prompt = "Observation: please analyze the accessibility tree and give the Thought and Action."
-        else:
-            messages = [{'role': 'system', 'content': SYSTEM_PROMPT}]
-            obs_prompt = "Observation: please analyze the attached screenshot and give the Thought and Action. "
-            if args.text_only:
-                messages = [{'role': 'system', 'content': SYSTEM_PROMPT_TEXT_ONLY}]
-                obs_prompt = "Observation: please analyze the accessibility tree and give the Thought and Action."
+        #     messages = [{'role': 'system', 'content': SYSTEM_PROMPT_BEST}]
+        #     obs_prompt = "Observation: please analyze the attached screenshot and give the Thought and Action. "
+        #     if args.text_only:
+        #         messages = [{'role': 'system', 'content': SYSTEM_PROMPT_BEST_TEXT_ONLY}]
+        #         obs_prompt = "Observation: please analyze the accessibility tree and give the Thought and Action."
+        # elif args.search_mode == 'personal':
+        #     messages = [{'role': 'system', 'content': SYSTEM_PROMPT_PERSONAL}]
+        #     obs_prompt = "Observation: please analyze the attached screenshot and give the Thought and Action. "
+        #     if args.text_only:
+        #         messages = [{'role': 'system', 'content': SYSTEM_PROMPT_PERSONAL_TEXT_ONLY}]
+        #         obs_prompt = "Observation: please analyze the accessibility tree and give the Thought and Action."
+
+        messages = [{'role': 'system', 'content': SYSTEM_PROMPT}]
+        obs_prompt = "Observation: please analyze the attached screenshot and give the Thought and Action. "
+        if args.text_only:
+            messages = [{'role': 'system', 'content': SYSTEM_PROMPT_TEXT_ONLY}]
+            obs_prompt = "Observation: please analyze the accessibility tree and give the Thought and Action."
 
         init_msg = f"""Now given a task: {task['ques']}  Please interact with https://www.example.com and get the answer. \n"""
         init_msg = init_msg.replace('https://www.example.com', task['web'])

@@ -16,19 +16,8 @@ def generate_question_by_mode(task):
     """Generate question based on mode and task information"""
     mode = task.get('mode', 'best-deal')  # default to best-deal if not specified
     base_query = task.get('query', '')
-   
-    if mode == "best-deal":
-        # Combine query with best deal keywords
-        keywords = [
-            "ราคาถูกที่สุด",
-            "โปรโมชั่น",
-            "ลดราคา",
-            "sale",
-            "cheapest"
-        ]
-        question = f"ค้นหา {base_query} ที่ {' และ '.join(keywords)}"
        
-    elif mode == "personalized":
+    if mode == "personalized":
         # Extract user information
         user_info = task.get('user_info', {})
         preferences = task.get('user_preference', [])
@@ -67,7 +56,15 @@ def generate_question_by_mode(task):
         question = f"ค้นหา {base_query} ที่เหมาะสำหรับคน{demographics}{style_info}"
    
     else:
-        question = base_query
+         # Combine query with best deal keywords
+        keywords = [
+            "ราคาถูกที่สุด",
+            "โปรโมชั่น",
+            "ลดราคา",
+            "sale",
+            "cheapest"
+        ]
+        question = f"ค้นหา {base_query} ที่ {' และ '.join(keywords)}"
        
     return question
 
