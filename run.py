@@ -242,7 +242,7 @@ def exec_action_scroll(info, web_eles, driver_task, args, obs_info):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--test_file', type=str, default='data/tasks_test.jsonl')
+    parser.add_argument('--test_file', type=str)
     parser.add_argument('--max_iter', type=int, default=15)
     parser.add_argument("--api_key", default="key", type=str, help="YOUR_OPENAI_API_KEY")
     parser.add_argument("--api_model", default="gpt-4o", type=str, help="api model name")
@@ -259,7 +259,7 @@ def main():
     parser.add_argument("--window_width", type=int, default=1024)
     parser.add_argument("--window_height", type=int, default=768)  # for headless mode, there is no address bar
     parser.add_argument("--fix_box_color", action='store_true')
-    parser.add_argument("--search_mode",type=str)
+    # parser.add_argument("--search_mode",type=str)
 
 
     args = parser.parse_args()
