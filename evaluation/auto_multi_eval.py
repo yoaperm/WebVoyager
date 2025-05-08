@@ -120,7 +120,7 @@ def auto_eval_by_gpt4v(process_dir, openai_client, api_model, img_num):
             + [{'type': 'text', 'text': "Your verdict:\n"}]
         }
     ]
-    print('messages:', messages)
+    # print('messages:', messages)
     while True:
         try:
             print('Calling gpt4v API to get the auto evaluation......')

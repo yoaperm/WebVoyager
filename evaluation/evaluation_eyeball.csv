@@ -1,0 +1,42 @@
+﻿ID,Task_Type,Additional_Info,Query,Owner,SingleAspect,Correctness,Completeness,Relevance,Action Efficiency,Reasons
+NocNoc--0,Best-Deal,cheap,Find the top 3 cheapest cooking pans by sorting the results from price low to high Answer the first 3 results after sorting.,YG,0,0,0,0,0,ติดหน้า I'm not a robot
+NocNoc--1,Best-Deal,cheap,What's the most affordable air purifier? sort the results from price low to high.,YG,0,0,0,1,1,Sort ถูก action น้อย แต่หน้าสุดท้ายเอาไส้กรองมาแทนเครื่องฟอก
+NocNoc--2,Best-Deal,cheap,Find the most budget-friendly projectors and sort the results by price low to high.,YG,0,0,0,1,1,Sort ถูก action น้อย แต่หน้าสุดท้ายเอาเทปมา ราคาน้อยสุด ซึ่งไม่ถูก
+NocNoc--3,Best-Deal,new,Show me the latest robot vacuums and sort the results by new arrivals.,YG,1,1,0,0,0,สินค้าถูก แต่ขึ้นสินค้าแนะนำแทนสินค้าล่าสุด
+NocNoc--4,Best-Deal,new,Find the newest hair dryers and sort the results by new arrivals.,Perm,,,,,,
+NocNoc--5,Best-Deal,new,Find me the newest Sony headphones and sort the results by new arrivals.,Perm,,,,,,
+NocNoc--6,Best-Deal,safe,Search for the Dyson vacuum from the store with the highest number of sales by sorting from best selling (high to low).,Perm,,,,,,
+NocNoc--7,Best-Deal,safe,Find the highest-rated store that sells Garmin Forerunner Pink (smartwatches) Answer the store name and the product name after searching,Perm,,,,,,
+NocNoc--8,Best-Deal,safe,Find Samsung Smart TV from the store with the highest number of sales by sorting from best selling (high to low).,BazMhee,,,,,,
+NocNoc--9,Best-Deal,newcheap,Find the newest and cheapest Samsung smartwatches.,BazMhee,,,,,,
+NocNoc--10,Best-Deal,newcheap,Find the newest and cheapest Logitech mouses.,BazMhee,,,,,,
+NocNoc--11,Best-Deal,cheapsafe,Find the cheapest soundbar with over 50 units sold.,BazMhee,,,,,,
+NocNoc--12,Best-Deal,cheapsafe,Find the cheapest projectors with over 20 units sold.,Baz,,,,,,
+NocNoc--13,Best-Deal,newsafe,Find the latest Smart TV with over 20 units sold.,Baz,,,,,,
+NocNoc--14,Best-Deal,newsafe,Find the Newest air conditioners with over 10 units sold.,Baz,,,,,,
+NocNoc--15,Best-Deal,cheap,ค้นหากระทะทำอาหารที่ราคาถูกที่สุด 3 อันดับแรก โดยจัดเรียงผลลัพธ์ตามราคาจากต่ำไปสูง จากนั้นตอบผลลัพธ์ 3 อันดับแรกหลังจากการจัดเรียง,Baz,,,,,,
+NocNoc--16,Best-Deal,new,ค้นหาไดร์เป่าผมรุ่นใหม่ล่าสุด โดยจัดเรียงผลลัพธ์ตามสินค้ามาใหม่,Baz,,,,,,
+NocNoc--17,Best-Deal,safe,ค้นหาเครื่องดูดฝุ่น Dyson จากร้านค้าที่มียอดขายสูงที่สุด โดยจัดเรียงจากยอดขายมากไปน้อย,Nick,,,,,,
+NocNoc--18,Best-Deal,newcheap,ค้นหานาฬิกาอัจฉริยะ Samsung ที่ใหม่ที่สุดและราคาถูกที่สุด,Nick,,,,,,
+NocNoc--19,Best-Deal,cheapsafe,ค้นหาซาวด์บาร์ที่ราคาถูกที่สุด และมียอดขายไปแล้วมากกว่า 50 เครื่อง,Nick,,,,,,
+NocNoc--20,Best-Deal,newsafe,ค้นหา Smart TV รุ่นล่าสุด ที่มียอดขายไปแล้วมากกว่า 20 เครื่อง,Nick,,,,,,
+NocNoc--22,Personalize,user_info: age: 58 genderOther height_cm: null weight_kg: null occupation: ธุรกิจส่วนตัว user_preferenceActive/Sporty,โต๊ะทำงาน,YG,1,1,1,1,1,ผ่านหมด Active Sporty น่าจะชอบพวกโต๊ะ Ergonomic เห็นด้วย แถม action น้อยด้วย ดีมากอันนี้
+NocNoc--23,Personalize,user_info: age: 40 genderชาย height_cm: 172 weight_kg: 69 occupation: พนักงานออฟฟิศ user_preferenceHomebody/Cozy,smart watch,YG,1,1,1,1,0,ผ่าน พนักงานออฟฟิสซื้อเสี่ยวมี่ก็ดูถูกนะ เพราะมันถูก
+NocNoc--24,Personalize,user_info: age: 36 genderหญิง height_cm: null weight_kg: null occupation: พนักงานออฟฟิศ user_preferenceEco-friendly,กระเป๋าเดินทาง cabin,YG,1,1,1,1,0,ผ่าน พิมเสริชว่า ECO-Friendly เลย
+NocNoc--25,Personalize,user_info: age: 52 genderOther height_cm: 181 weight_kg: null occupation: พนักงานออฟฟิศ user_preferenceEco-friendly,ตู้เสื้อผ้า,YG,0,0,0,1,0,ไม่ผ่าน ภาพสุดท้ายไม่มีราคา
+NocNoc--26,Personalize,user_info: age: 36 genderชาย height_cm: 182 weight_kg: 107 occupation: ธุรกิจส่วนตัว user_preferenceEco-friendly,เก้าอี้ ergonomic,Perm,,,,,,
+NocNoc--27,Personalize,user_info: age: 33 genderชาย height_cm: null weight_kg: 86 occupation: ธุรกิจส่วนตัว user_preferenceActive/Sporty,ไฟตกแต่งห้อง,Perm,,,,,,
+NocNoc--28,Personalize,user_info: age: 38 genderOther height_cm: 152 weight_kg: null occupation: ธุรกิจส่วนตัว user_preferenceActive/Sporty,เก้าอี้ ergonomic,Perm,,,,,,
+NocNoc--29,Personalize,user_info: age: 40 genderOther height_cm: 156 weight_kg: 85 occupation: null} Luxury/Premium,โคมไฟตั้งโต๊ะ,Perm,,,,,,
+NocNoc--30,Personalize,user_info: age: 45 genderOther height_cm: null weight_kg: 68 occupation: ธุรกิจส่วนตัว user_preferenceEco-friendly,หูฟัง,BazMhee,,,,,,
+NocNoc--31,Personalize,user_info: age: 44 genderOther height_cm: 185 weight_kg: null occupation: freelance user_preferenceLuxury/Premium,โต๊ะญี่ปุ่น,BazMhee,,,,,,
+NocNoc--32,Personalize,user_info: age: 60 genderชาย height_cm: null weight_kg: null occupation: นักศึกษา user_preferenceOffice/Professional,โซฟา,BazMhee,,,,,,
+NocNoc--33,Personalize,user_info: age: 23 genderหญิง height_cm: null weight_kg: 56 occupation: นักศึกษา user_preferenceOffice/Professional,keyboard mechanical,BazMhee,,,,,,
+NocNoc--34,Personalize,user_info: age: 48 genderOther height_cm: null weight_kg: 89 occupation: ธุรกิจส่วนตัว user_preferenceTraveler,ตู้เก็บรองเท้า,Baz,,,,,,
+NocNoc--35,Personalize,user_info: age: 33 genderชาย height_cm: 161 weight_kg: 86 occupation: Other user_preferenceOffice/Professional,ผ้าห่ม,Baz,,,,,,
+NocNoc--36,Personalize,user_info: age: 43 genderหญิง height_cm: 178 weight_kg: null occupation: Other user_preferenceTrendy/Fashionable,เครื่องฟอกอากาศ,Baz,,,,,,
+NocNoc--37,Personalize,user_info: age: 52 genderOther height_cm: 149 weight_kg: null occupation: นักศึกษา user_preferenceHomebody/Cozy,พรมห้องนั่งเล่น,Baz,,,,,,
+NocNoc--38,Personalize,user_info: age: 33 genderOther height_cm: 147 weight_kg: null occupation: null} Homebody/Cozy,กระเป๋าเดินทาง,Nick,,,,,,
+NocNoc--39,Personalize,user_info: age: 42 genderหญิง height_cm: null weight_kg: 88 occupation: พนักงานออฟฟิศ user_preferenceLuxury/Premium,โซฟา,Nick,,,,,,
+NocNoc--40,Personalize,user_info: age: 41 genderOther height_cm: null weight_kg: null occupation: พนักงานออฟฟิศ user_preferenceActive/Sporty,ไฟตกแต่งห้อง,Nick,,,,,,
+NocNoc--41,Personalize,user_info: age: 47 genderOther height_cm: 151 weight_kg: 73 occupation: ธุรกิจส่วนตัว user_preferenceHomebody/Cozy,กระเป๋าเดินทาง cabin,Nick,,,,,,
