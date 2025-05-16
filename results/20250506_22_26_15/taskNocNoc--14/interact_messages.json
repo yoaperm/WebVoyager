@@ -9,7 +9,7 @@
   },
   {
     "role": "assistant",
-    "content": "Thought: To search for air conditioners, I'll click on the category labeled \"\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e1b\u0e23\u0e31\u0e1a\u0e2d\u0e32\u0e01\u0e32\u0e28\" (air conditioners).\n\nAction: Click [30]"
+    "content": "Thought: To search for air conditioners, I'll click on the category labeled \"เครื่องปรับอากาศ\" (air conditioners).\n\nAction: Click [30]"
   },
   {
     "role": "user",
@@ -17,11 +17,11 @@
   },
   {
     "role": "assistant",
-    "content": "Thought: I need to proceed to the next step in selecting an air conditioner by clicking \"\u0e16\u0e31\u0e14\u0e44\u0e1b\" (Next).\n\nAction: Click [10]"
+    "content": "Thought: I need to proceed to the next step in selecting an air conditioner by clicking \"ถัดไป\" (Next).\n\nAction: Click [10]"
   },
   {
     "role": "user",
-    "content": "\n    You have just completed a web search step in a broader task. Before proceeding, reflect on the effectiveness of your current strategy.\n\n    1. Evaluation: Was the information retrieved useful and relevant to the overall goal of the task? Did it move the process forward meaningfully?\n\n    2. Strategy Analysis: What approach or reasoning led to the last search? Was it optimal? Were there any limitations or inefficiencies in how you framed the query or interpreted the results?\n\n    3. Strategy Adjustment: Based on this analysis, should you continue with the current approach, or is there a better strategy to try next? (e.g., reformulating the query, narrowing or broadening scope, using different keywords, considering other sources).\n\n    4. Recommendation: What is your recommended next action? Be specific\u2014this could be a refined query, a new search angle, or a shift in approach.\n\n    Write your reflection in a clear and structured manner, following the four steps above.\n"
+    "content": "\n    You have just completed a web search step in a broader task. Before proceeding, reflect on the effectiveness of your current strategy.\n\n    1. Evaluation: Was the information retrieved useful and relevant to the overall goal of the task? Did it move the process forward meaningfully?\n\n    2. Strategy Analysis: What approach or reasoning led to the last search? Was it optimal? Were there any limitations or inefficiencies in how you framed the query or interpreted the results?\n\n    3. Strategy Adjustment: Based on this analysis, should you continue with the current approach, or is there a better strategy to try next? (e.g., reformulating the query, narrowing or broadening scope, using different keywords, considering other sources).\n\n    4. Recommendation: What is your recommended next action? Be specific—this could be a refined query, a new search angle, or a shift in approach.\n\n    Write your reflection in a clear and structured manner, following the four steps above.\n"
   },
   {
     "role": "user",
@@ -37,7 +37,7 @@
   },
   {
     "role": "assistant",
-    "content": "Thought: To focus on finding air conditioners, I should navigate to the \"\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e1b\u0e23\u0e31\u0e1a\u0e2d\u0e32\u0e01\u0e32\u0e28\" (air conditioners) category.\n\nAction: Click [30]"
+    "content": "Thought: To focus on finding air conditioners, I should navigate to the \"เครื่องปรับอากาศ\" (air conditioners) category.\n\nAction: Click [30]"
   },
   {
     "role": "user",
@@ -53,7 +53,7 @@
   },
   {
     "role": "assistant",
-    "content": "Thought: The air conditioners category is now accessible. I'll click on \"\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e1b\u0e23\u0e31\u0e1a\u0e2d\u0e32\u0e01\u0e32\u0e28\" to see the selections.\n\nAction: Click [30]"
+    "content": "Thought: The air conditioners category is now accessible. I'll click on \"เครื่องปรับอากาศ\" to see the selections.\n\nAction: Click [30]"
   },
   {
     "role": "user",
@@ -65,7 +65,7 @@
   },
   {
     "role": "user",
-    "content": "\n    You have just completed a web search step in a broader task. Before proceeding, reflect on the effectiveness of your current strategy.\n\n    1. Evaluation: Was the information retrieved useful and relevant to the overall goal of the task? Did it move the process forward meaningfully?\n\n    2. Strategy Analysis: What approach or reasoning led to the last search? Was it optimal? Were there any limitations or inefficiencies in how you framed the query or interpreted the results?\n\n    3. Strategy Adjustment: Based on this analysis, should you continue with the current approach, or is there a better strategy to try next? (e.g., reformulating the query, narrowing or broadening scope, using different keywords, considering other sources).\n\n    4. Recommendation: What is your recommended next action? Be specific\u2014this could be a refined query, a new search angle, or a shift in approach.\n\n    Write your reflection in a clear and structured manner, following the four steps above.\n"
+    "content": "\n    You have just completed a web search step in a broader task. Before proceeding, reflect on the effectiveness of your current strategy.\n\n    1. Evaluation: Was the information retrieved useful and relevant to the overall goal of the task? Did it move the process forward meaningfully?\n\n    2. Strategy Analysis: What approach or reasoning led to the last search? Was it optimal? Were there any limitations or inefficiencies in how you framed the query or interpreted the results?\n\n    3. Strategy Adjustment: Based on this analysis, should you continue with the current approach, or is there a better strategy to try next? (e.g., reformulating the query, narrowing or broadening scope, using different keywords, considering other sources).\n\n    4. Recommendation: What is your recommended next action? Be specific—this could be a refined query, a new search angle, or a shift in approach.\n\n    Write your reflection in a clear and structured manner, following the four steps above.\n"
   },
   {
     "role": "user",
@@ -89,11 +89,11 @@
   },
   {
     "role": "assistant",
-    "content": "Thought: The air conditioner section has loaded, showing specific categories like \"\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e1b\u0e23\u0e31\u0e1a\u0e2d\u0e32\u0e01\u0e32\u0e28\" and \"\u0e2d\u0e38\u0e1b\u0e01\u0e23\u0e13\u0e4c\u0e41\u0e2d\u0e23\u0e4c\". I should look for sorting options or specific products to match the task criteria.\n\nAction: Click [35] to explore filter options."
+    "content": "Thought: The air conditioner section has loaded, showing specific categories like \"เครื่องปรับอากาศ\" and \"อุปกรณ์แอร์\". I should look for sorting options or specific products to match the task criteria.\n\nAction: Click [35] to explore filter options."
   },
   {
     "role": "user",
-    "content": "\n    You have just completed a web search step in a broader task. Before proceeding, reflect on the effectiveness of your current strategy.\n\n    1. Evaluation: Was the information retrieved useful and relevant to the overall goal of the task? Did it move the process forward meaningfully?\n\n    2. Strategy Analysis: What approach or reasoning led to the last search? Was it optimal? Were there any limitations or inefficiencies in how you framed the query or interpreted the results?\n\n    3. Strategy Adjustment: Based on this analysis, should you continue with the current approach, or is there a better strategy to try next? (e.g., reformulating the query, narrowing or broadening scope, using different keywords, considering other sources).\n\n    4. Recommendation: What is your recommended next action? Be specific\u2014this could be a refined query, a new search angle, or a shift in approach.\n\n    Write your reflection in a clear and structured manner, following the four steps above.\n"
+    "content": "\n    You have just completed a web search step in a broader task. Before proceeding, reflect on the effectiveness of your current strategy.\n\n    1. Evaluation: Was the information retrieved useful and relevant to the overall goal of the task? Did it move the process forward meaningfully?\n\n    2. Strategy Analysis: What approach or reasoning led to the last search? Was it optimal? Were there any limitations or inefficiencies in how you framed the query or interpreted the results?\n\n    3. Strategy Adjustment: Based on this analysis, should you continue with the current approach, or is there a better strategy to try next? (e.g., reformulating the query, narrowing or broadening scope, using different keywords, considering other sources).\n\n    4. Recommendation: What is your recommended next action? Be specific—this could be a refined query, a new search angle, or a shift in approach.\n\n    Write your reflection in a clear and structured manner, following the four steps above.\n"
   },
   {
     "role": "user",
@@ -109,14 +109,14 @@
   },
   {
     "role": "assistant",
-    "content": "Thought: The \"\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e1b\u0e23\u0e31\u0e1a\u0e2d\u0e32\u0e01\u0e32\u0e28\" (air conditioners) section is visible. Clicking it will lead to air conditioners options.\n\nAction: Click [30]"
+    "content": "Thought: The \"เครื่องปรับอากาศ\" (air conditioners) section is visible. Clicking it will lead to air conditioners options.\n\nAction: Click [30]"
   },
   {
     "role": "user",
     "content": [
       {
         "type": "text",
-        "text": "Observation: please analyze the attached screenshot and give the Thought and Action. I've provided the tag name of each element and the text it contains (if text exists). Note that <textarea> or <input> may be textbox, but not exactly. Please focus more on the screenshot and then refer to the textual information.\n[0]: \"iOS\";\t[1]: \"Android\";\t[2]: \"\u0e23\u0e31\u0e1a\u0e2a\u0e34\u0e17\u0e18\u0e34\u0e1e\u0e34\u0e40\u0e28\u0e29 NocNoc Club\";\t[3]: \"\u0e0a\u0e48\u0e32\u0e07\u0e41\u0e25\u0e30\u0e1a\u0e23\u0e34\u0e01\u0e32\u0e23\";\t[4]: \"\u0e21\u0e32\u0e40\u0e1b\u0e47\u0e19\u0e1c\u0e39\u0e49\u0e02\u0e32\u0e22\";\t[5]: \"NocNoc \u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e18\u0e38\u0e23\u0e01\u0e34\u0e08\";\t[6]: \"\u0e1a\u0e17\u0e04\u0e27\u0e32\u0e21\u0e19\u0e48\u0e32\u0e23\u0e39\u0e49\";\t[8]: <input> \"Search Input\";\t[9]: <button> \"Search Button\";\t[11]: <button> \"\u0e40\u0e02\u0e49\u0e32\u0e2a\u0e39\u0e48\u0e23\u0e30\u0e1a\u0e1a\";\t[13]: \"\u0e04\u0e49\u0e19\u0e2b\u0e32\u0e08\u0e32\u0e01\u0e2b\u0e49\u0e2d\u0e07\";\t[14]: \"\u0e40\u0e1f\u0e2d\u0e23\u0e4c\u0e19\u0e34\u0e40\u0e08\u0e2d\u0e23\u0e4c\";\t[15]: \"\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e19\u0e2d\u0e19\";\t[16]: \"\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32\u0e2a\u0e33\u0e2b\u0e23\u0e31\u0e1a\u0e2b\u0e49\u0e2d\u0e07\u0e19\u0e49\u0e33\";\t[17]: \"\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32\u0e2a\u0e33\u0e2b\u0e23\u0e31\u0e1a\u0e04\u0e23\u0e31\u0e27\";\t[18]: \"\u0e02\u0e2d\u0e07\u0e41\u0e15\u0e48\u0e07\u0e1a\u0e49\u0e32\u0e19\";\t[19]: \"\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e43\u0e0a\u0e49\u0e44\u0e1f\u0e1f\u0e49\u0e32\";\t[20]: \"\u0e1a\u0e49\u0e32\u0e19\u0e41\u0e25\u0e30\u0e44\u0e25\u0e1f\u0e4c\u0e2a\u0e44\u0e15\u0e25\u0e4c\";\t[21]: \"\u0e27\u0e31\u0e2a\u0e14\u0e38\u0e1b\u0e39\u0e1e\u0e37\u0e49\u0e19\";\t[22]: \"\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32\u0e19\u0e2d\u0e01\u0e1a\u0e49\u0e32\u0e19\";\t[23]: \"\u0e01\u0e48\u0e2d\u0e2a\u0e23\u0e49\u0e32\u0e07\u0e41\u0e25\u0e30\u0e23\u0e35\u0e42\u0e19\u0e40\u0e27\u0e17\";\t[24]: \"\u0e42\u0e1b\u0e23\u0e42\u0e21\u0e0a\u0e31\u0e19\";\t[26]: \"\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e43\u0e0a\u0e49\u0e44\u0e1f\u0e1f\u0e49\u0e32\";\t[27]: \"\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e1b\u0e23\u0e31\u0e1a\u0e2d\u0e32\u0e01\u0e32\u0e28\";\t[28]: <button> \"\u0e40\u0e23\u0e34\u0e48\u0e21\u0e04\u0e27\u0e34\u0e0b\u0e40\u0e25\u0e22\";\t[30]: \"\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e1b\u0e23\u0e31\u0e1a\u0e2d\u0e32\u0e01\u0e32\u0e28\";\t[33]: \"\u0e2d\u0e38\u0e1b\u0e01\u0e23\u0e13\u0e4c\u0e41\u0e2d\u0e23\u0e4c / \u0e2d\u0e38\u0e1b\u0e01\u0e23\u0e13\u0e4c\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e1b\u0e23\u0e31\u0e1a\u0e2d\u0e32\u0e01\u0e32\u0e28\";\t[36]: <button> \"\u0e2b\u0e21\u0e27\u0e14\u0e2b\u0e21\u0e39\u0e48\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32\";\t[38]: \"\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32\u0e41\u0e19\u0e30\u0e19\u0e33\";\t[39]: \"\u0e19\u0e42\u0e22\u0e1a\u0e32\u0e22\u0e01\u0e32\u0e23\u0e43\u0e0a\u0e49\u0e04\u0e38\u0e01\u0e01\u0e35\u0e49\";\t[40]: \"\u0e01\u0e32\u0e23\u0e15\u0e31\u0e49\u0e07\u0e04\u0e48\u0e32\u0e04\u0e38\u0e01\u0e01\u0e35\u0e49\";\t[41]: \"\u0e22\u0e2d\u0e21\u0e23\u0e31\u0e1a\u0e17\u0e31\u0e49\u0e07\u0e2b\u0e21\u0e14\";"
+        "text": "Observation: please analyze the attached screenshot and give the Thought and Action. I've provided the tag name of each element and the text it contains (if text exists). Note that <textarea> or <input> may be textbox, but not exactly. Please focus more on the screenshot and then refer to the textual information.\n[0]: \"iOS\";\t[1]: \"Android\";\t[2]: \"รับสิทธิพิเศษ NocNoc Club\";\t[3]: \"ช่างและบริการ\";\t[4]: \"มาเป็นผู้ขาย\";\t[5]: \"NocNoc เพื่อธุรกิจ\";\t[6]: \"บทความน่ารู้\";\t[8]: <input> \"Search Input\";\t[9]: <button> \"Search Button\";\t[11]: <button> \"เข้าสู่ระบบ\";\t[13]: \"ค้นหาจากห้อง\";\t[14]: \"เฟอร์นิเจอร์\";\t[15]: \"เครื่องนอน\";\t[16]: \"สินค้าสำหรับห้องน้ำ\";\t[17]: \"สินค้าสำหรับครัว\";\t[18]: \"ของแต่งบ้าน\";\t[19]: \"เครื่องใช้ไฟฟ้า\";\t[20]: \"บ้านและไลฟ์สไตล์\";\t[21]: \"วัสดุปูพื้น\";\t[22]: \"สินค้านอกบ้าน\";\t[23]: \"ก่อสร้างและรีโนเวท\";\t[24]: \"โปรโมชัน\";\t[26]: \"เครื่องใช้ไฟฟ้า\";\t[27]: \"เครื่องปรับอากาศ\";\t[28]: <button> \"เริ่มควิซเลย\";\t[30]: \"เครื่องปรับอากาศ\";\t[33]: \"อุปกรณ์แอร์ / อุปกรณ์เครื่องปรับอากาศ\";\t[36]: <button> \"หมวดหมู่สินค้า\";\t[38]: \"สินค้าแนะนำ\";\t[39]: \"นโยบายการใช้คุกกี้\";\t[40]: \"การตั้งค่าคุกกี้\";\t[41]: \"ยอมรับทั้งหมด\";"
       },
       {
         "type": "image_url",
@@ -128,14 +128,14 @@
   },
   {
     "role": "assistant",
-    "content": "Thought: The \"\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e1b\u0e23\u0e31\u0e1a\u0e2d\u0e32\u0e01\u0e32\u0e28\" (air conditioners) category is selected. I need to look for filters or sorting options to find the newest models.\n\nAction: Click [35] to explore filter options."
+    "content": "Thought: The \"เครื่องปรับอากาศ\" (air conditioners) category is selected. I need to look for filters or sorting options to find the newest models.\n\nAction: Click [35] to explore filter options."
   },
   {
     "role": "user",
     "content": [
       {
         "type": "text",
-        "text": "Observation: please analyze the attached screenshot and give the Thought and Action. I've provided the tag name of each element and the text it contains (if text exists). Note that <textarea> or <input> may be textbox, but not exactly. Please focus more on the screenshot and then refer to the textual information.\n[0]: \"iOS\";\t[1]: \"Android\";\t[2]: \"\u0e23\u0e31\u0e1a\u0e2a\u0e34\u0e17\u0e18\u0e34\u0e1e\u0e34\u0e40\u0e28\u0e29 NocNoc Club\";\t[3]: \"\u0e0a\u0e48\u0e32\u0e07\u0e41\u0e25\u0e30\u0e1a\u0e23\u0e34\u0e01\u0e32\u0e23\";\t[4]: \"\u0e21\u0e32\u0e40\u0e1b\u0e47\u0e19\u0e1c\u0e39\u0e49\u0e02\u0e32\u0e22\";\t[5]: \"NocNoc \u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e18\u0e38\u0e23\u0e01\u0e34\u0e08\";\t[6]: \"\u0e1a\u0e17\u0e04\u0e27\u0e32\u0e21\u0e19\u0e48\u0e32\u0e23\u0e39\u0e49\";\t[8]: <input> \"Search Input\";\t[9]: <button> \"Search Button\";\t[11]: <button> \"\u0e40\u0e02\u0e49\u0e32\u0e2a\u0e39\u0e48\u0e23\u0e30\u0e1a\u0e1a\";\t[13]: \"\u0e04\u0e49\u0e19\u0e2b\u0e32\u0e08\u0e32\u0e01\u0e2b\u0e49\u0e2d\u0e07\";\t[14]: \"\u0e40\u0e1f\u0e2d\u0e23\u0e4c\u0e19\u0e34\u0e40\u0e08\u0e2d\u0e23\u0e4c\";\t[15]: \"\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e19\u0e2d\u0e19\";\t[16]: \"\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32\u0e2a\u0e33\u0e2b\u0e23\u0e31\u0e1a\u0e2b\u0e49\u0e2d\u0e07\u0e19\u0e49\u0e33\";\t[17]: \"\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32\u0e2a\u0e33\u0e2b\u0e23\u0e31\u0e1a\u0e04\u0e23\u0e31\u0e27\";\t[18]: \"\u0e02\u0e2d\u0e07\u0e41\u0e15\u0e48\u0e07\u0e1a\u0e49\u0e32\u0e19\";\t[19]: \"\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e43\u0e0a\u0e49\u0e44\u0e1f\u0e1f\u0e49\u0e32\";\t[20]: \"\u0e1a\u0e49\u0e32\u0e19\u0e41\u0e25\u0e30\u0e44\u0e25\u0e1f\u0e4c\u0e2a\u0e44\u0e15\u0e25\u0e4c\";\t[21]: \"\u0e27\u0e31\u0e2a\u0e14\u0e38\u0e1b\u0e39\u0e1e\u0e37\u0e49\u0e19\";\t[22]: \"\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32\u0e19\u0e2d\u0e01\u0e1a\u0e49\u0e32\u0e19\";\t[23]: \"\u0e01\u0e48\u0e2d\u0e2a\u0e23\u0e49\u0e32\u0e07\u0e41\u0e25\u0e30\u0e23\u0e35\u0e42\u0e19\u0e40\u0e27\u0e17\";\t[24]: \"\u0e42\u0e1b\u0e23\u0e42\u0e21\u0e0a\u0e31\u0e19\";\t[26]: \"\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e43\u0e0a\u0e49\u0e44\u0e1f\u0e1f\u0e49\u0e32\";\t[27]: \"\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e1b\u0e23\u0e31\u0e1a\u0e2d\u0e32\u0e01\u0e32\u0e28\";\t[28]: <button> \"\u0e40\u0e23\u0e34\u0e48\u0e21\u0e04\u0e27\u0e34\u0e0b\u0e40\u0e25\u0e22\";\t[30]: \"\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e1b\u0e23\u0e31\u0e1a\u0e2d\u0e32\u0e01\u0e32\u0e28\";\t[33]: \"\u0e2d\u0e38\u0e1b\u0e01\u0e23\u0e13\u0e4c\u0e41\u0e2d\u0e23\u0e4c / \u0e2d\u0e38\u0e1b\u0e01\u0e23\u0e13\u0e4c\u0e40\u0e04\u0e23\u0e37\u0e48\u0e2d\u0e07\u0e1b\u0e23\u0e31\u0e1a\u0e2d\u0e32\u0e01\u0e32\u0e28\";\t[36]: <button> \"\u0e2b\u0e21\u0e27\u0e14\u0e2b\u0e21\u0e39\u0e48\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32\";\t[38]: \"\u0e2a\u0e34\u0e19\u0e04\u0e49\u0e32\u0e41\u0e19\u0e30\u0e19\u0e33\";\t[39]: \"\u0e19\u0e42\u0e22\u0e1a\u0e32\u0e22\u0e01\u0e32\u0e23\u0e43\u0e0a\u0e49\u0e04\u0e38\u0e01\u0e01\u0e35\u0e49\";\t[40]: \"\u0e01\u0e32\u0e23\u0e15\u0e31\u0e49\u0e07\u0e04\u0e48\u0e32\u0e04\u0e38\u0e01\u0e01\u0e35\u0e49\";\t[41]: \"\u0e22\u0e2d\u0e21\u0e23\u0e31\u0e1a\u0e17\u0e31\u0e49\u0e07\u0e2b\u0e21\u0e14\";"
+        "text": "Observation: please analyze the attached screenshot and give the Thought and Action. I've provided the tag name of each element and the text it contains (if text exists). Note that <textarea> or <input> may be textbox, but not exactly. Please focus more on the screenshot and then refer to the textual information.\n[0]: \"iOS\";\t[1]: \"Android\";\t[2]: \"รับสิทธิพิเศษ NocNoc Club\";\t[3]: \"ช่างและบริการ\";\t[4]: \"มาเป็นผู้ขาย\";\t[5]: \"NocNoc เพื่อธุรกิจ\";\t[6]: \"บทความน่ารู้\";\t[8]: <input> \"Search Input\";\t[9]: <button> \"Search Button\";\t[11]: <button> \"เข้าสู่ระบบ\";\t[13]: \"ค้นหาจากห้อง\";\t[14]: \"เฟอร์นิเจอร์\";\t[15]: \"เครื่องนอน\";\t[16]: \"สินค้าสำหรับห้องน้ำ\";\t[17]: \"สินค้าสำหรับครัว\";\t[18]: \"ของแต่งบ้าน\";\t[19]: \"เครื่องใช้ไฟฟ้า\";\t[20]: \"บ้านและไลฟ์สไตล์\";\t[21]: \"วัสดุปูพื้น\";\t[22]: \"สินค้านอกบ้าน\";\t[23]: \"ก่อสร้างและรีโนเวท\";\t[24]: \"โปรโมชัน\";\t[26]: \"เครื่องใช้ไฟฟ้า\";\t[27]: \"เครื่องปรับอากาศ\";\t[28]: <button> \"เริ่มควิซเลย\";\t[30]: \"เครื่องปรับอากาศ\";\t[33]: \"อุปกรณ์แอร์ / อุปกรณ์เครื่องปรับอากาศ\";\t[36]: <button> \"หมวดหมู่สินค้า\";\t[38]: \"สินค้าแนะนำ\";\t[39]: \"นโยบายการใช้คุกกี้\";\t[40]: \"การตั้งค่าคุกกี้\";\t[41]: \"ยอมรับทั้งหมด\";"
       },
       {
         "type": "image_url",
@@ -151,7 +151,7 @@
   },
   {
     "role": "user",
-    "content": "\n    You have just completed a web search step in a broader task. Before proceeding, reflect on the effectiveness of your current strategy.\n\n    1. Evaluation: Was the information retrieved useful and relevant to the overall goal of the task? Did it move the process forward meaningfully?\n\n    2. Strategy Analysis: What approach or reasoning led to the last search? Was it optimal? Were there any limitations or inefficiencies in how you framed the query or interpreted the results?\n\n    3. Strategy Adjustment: Based on this analysis, should you continue with the current approach, or is there a better strategy to try next? (e.g., reformulating the query, narrowing or broadening scope, using different keywords, considering other sources).\n\n    4. Recommendation: What is your recommended next action? Be specific\u2014this could be a refined query, a new search angle, or a shift in approach.\n\n    Write your reflection in a clear and structured manner, following the four steps above.\n"
+    "content": "\n    You have just completed a web search step in a broader task. Before proceeding, reflect on the effectiveness of your current strategy.\n\n    1. Evaluation: Was the information retrieved useful and relevant to the overall goal of the task? Did it move the process forward meaningfully?\n\n    2. Strategy Analysis: What approach or reasoning led to the last search? Was it optimal? Were there any limitations or inefficiencies in how you framed the query or interpreted the results?\n\n    3. Strategy Adjustment: Based on this analysis, should you continue with the current approach, or is there a better strategy to try next? (e.g., reformulating the query, narrowing or broadening scope, using different keywords, considering other sources).\n\n    4. Recommendation: What is your recommended next action? Be specific—this could be a refined query, a new search angle, or a shift in approach.\n\n    Write your reflection in a clear and structured manner, following the four steps above.\n"
   },
   {
     "role": "user",

@@ -17,7 +17,7 @@
   },
   {
     "role": "assistant",
-    "content": "Thought: I need to close the advertisement by clicking on the \"\u00d7\" to better interact with the page for sorting options.\n\nAction: Click [1]"
+    "content": "Thought: I need to close the advertisement by clicking on the \"×\" to better interact with the page for sorting options.\n\nAction: Click [1]"
   },
   {
     "role": "user",
@@ -29,7 +29,7 @@
   },
   {
     "role": "user",
-    "content": "\n    You have just completed a web search step in a broader task. Before proceeding, reflect on the effectiveness of your current strategy.\n\n    1. Evaluation: Was the information retrieved useful and relevant to the overall goal of the task? Did it move the process forward meaningfully?\n\n    2. Strategy Analysis: What approach or reasoning led to the last search? Was it optimal? Were there any limitations or inefficiencies in how you framed the query or interpreted the results?\n\n    3. Strategy Adjustment: Based on this analysis, should you continue with the current approach, or is there a better strategy to try next? (e.g., reformulating the query, narrowing or broadening scope, using different keywords, considering other sources).\n\n    4. Recommendation: What is your recommended next action? Be specific\u2014this could be a refined query, a new search angle, or a shift in approach.\n\n    Write your reflection in a clear and structured manner, following the four steps above.\n"
+    "content": "\n    You have just completed a web search step in a broader task. Before proceeding, reflect on the effectiveness of your current strategy.\n\n    1. Evaluation: Was the information retrieved useful and relevant to the overall goal of the task? Did it move the process forward meaningfully?\n\n    2. Strategy Analysis: What approach or reasoning led to the last search? Was it optimal? Were there any limitations or inefficiencies in how you framed the query or interpreted the results?\n\n    3. Strategy Adjustment: Based on this analysis, should you continue with the current approach, or is there a better strategy to try next? (e.g., reformulating the query, narrowing or broadening scope, using different keywords, considering other sources).\n\n    4. Recommendation: What is your recommended next action? Be specific—this could be a refined query, a new search angle, or a shift in approach.\n\n    Write your reflection in a clear and structured manner, following the four steps above.\n"
   },
   {
     "role": "user",
@@ -124,7 +124,7 @@
   },
   {
     "role": "user",
-    "content": "\n    You have just completed a web search step in a broader task. Before proceeding, reflect on the effectiveness of your current strategy.\n\n    1. Evaluation: Was the information retrieved useful and relevant to the overall goal of the task? Did it move the process forward meaningfully?\n\n    2. Strategy Analysis: What approach or reasoning led to the last search? Was it optimal? Were there any limitations or inefficiencies in how you framed the query or interpreted the results?\n\n    3. Strategy Adjustment: Based on this analysis, should you continue with the current approach, or is there a better strategy to try next? (e.g., reformulating the query, narrowing or broadening scope, using different keywords, considering other sources).\n\n    4. Recommendation: What is your recommended next action? Be specific\u2014this could be a refined query, a new search angle, or a shift in approach.\n\n    Write your reflection in a clear and structured manner, following the four steps above.\n"
+    "content": "\n    You have just completed a web search step in a broader task. Before proceeding, reflect on the effectiveness of your current strategy.\n\n    1. Evaluation: Was the information retrieved useful and relevant to the overall goal of the task? Did it move the process forward meaningfully?\n\n    2. Strategy Analysis: What approach or reasoning led to the last search? Was it optimal? Were there any limitations or inefficiencies in how you framed the query or interpreted the results?\n\n    3. Strategy Adjustment: Based on this analysis, should you continue with the current approach, or is there a better strategy to try next? (e.g., reformulating the query, narrowing or broadening scope, using different keywords, considering other sources).\n\n    4. Recommendation: What is your recommended next action? Be specific—this could be a refined query, a new search angle, or a shift in approach.\n\n    Write your reflection in a clear and structured manner, following the four steps above.\n"
   },
   {
     "role": "user",
