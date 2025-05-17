@@ -64,9 +64,13 @@ def encode_image(image_path):
 def auto_eval_by_gpt4v(process_dir, openai_client, api_model, img_num):
     print(f'--------------------- {process_dir} ---------------------')
     res_files = sorted(os.listdir(process_dir))
+    # print(process_dir)
+    # print(res_files)
     with open(os.path.join(process_dir, 'interact_messages.json')) as fr:
         it_messages = json.load(fr)
-
+        
+    print(len(it_messages))
+    # exit()
     if len(it_messages) == 1:
         print('Not find answer for ' + process_dir + ' only system messages')
         print()
@@ -164,9 +168,11 @@ def auto_eval_by_gpt4v(process_dir, openai_client, api_model, img_num):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--process_dir', type=str, default='results')
+    # api_key "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" \
+    # --process_dir ../results/20250506_22_26_15 
+    parser.add_argument('--process_dir', type=str, default='../results/20250506_22_26_15')
     parser.add_argument('--lesson_dir', type=str, default='results')
-    parser.add_argument("--api_key", default="key", type=str, help="YOUR_OPENAI_API_KEY")
+    parser.add_argument("--api_key", default="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", type=str, help="YOUR_OPENAI_API_KEY")
     parser.add_argument("--api_model", default="gpt-4o", type=str, help="api model name")
     parser.add_argument("--max_attached_imgs", type=int, default=1)
     args = parser.parse_args()
